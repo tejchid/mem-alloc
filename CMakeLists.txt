@@ -9,7 +9,7 @@ option(ENABLE_ASAN "AddressSanitizer + UBSan" OFF)
 option(ENABLE_TSAN "ThreadSanitizer"          OFF)
 
 add_compile_options(-O2 -Wall -Wextra)
-
+add_compile_definitions(MA_ENABLE_STATS=0)
 if(ENABLE_ASAN)
     add_compile_options(-fsanitize=address,undefined)
     add_link_options(-fsanitize=address,undefined)

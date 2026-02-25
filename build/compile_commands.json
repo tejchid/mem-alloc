@@ -1,61 +1,61 @@
 [
 {
   "directory": "/Users/tejjchid/mem-alloc/build",
-  "command": "/usr/bin/c++  -I/Users/tejjchid/mem-alloc/src -I/Users/tejjchid/mem-alloc/include -std=gnu++20 -O2 -Wall -Wextra -o CMakeFiles/memalloc.dir/src/vm_region.cpp.o -c /Users/tejjchid/mem-alloc/src/vm_region.cpp",
+  "command": "/usr/bin/c++ -DMA_ENABLE_STATS=0 -I/Users/tejjchid/mem-alloc/src -I/Users/tejjchid/mem-alloc/include -std=gnu++20 -O2 -Wall -Wextra -o CMakeFiles/memalloc.dir/src/vm_region.cpp.o -c /Users/tejjchid/mem-alloc/src/vm_region.cpp",
   "file": "/Users/tejjchid/mem-alloc/src/vm_region.cpp",
   "output": "CMakeFiles/memalloc.dir/src/vm_region.cpp.o"
 },
 {
   "directory": "/Users/tejjchid/mem-alloc/build",
-  "command": "/usr/bin/c++  -I/Users/tejjchid/mem-alloc/src -I/Users/tejjchid/mem-alloc/include -std=gnu++20 -O2 -Wall -Wextra -o CMakeFiles/memalloc.dir/src/arena.cpp.o -c /Users/tejjchid/mem-alloc/src/arena.cpp",
+  "command": "/usr/bin/c++ -DMA_ENABLE_STATS=0 -I/Users/tejjchid/mem-alloc/src -I/Users/tejjchid/mem-alloc/include -std=gnu++20 -O2 -Wall -Wextra -o CMakeFiles/memalloc.dir/src/arena.cpp.o -c /Users/tejjchid/mem-alloc/src/arena.cpp",
   "file": "/Users/tejjchid/mem-alloc/src/arena.cpp",
   "output": "CMakeFiles/memalloc.dir/src/arena.cpp.o"
 },
 {
   "directory": "/Users/tejjchid/mem-alloc/build",
-  "command": "/usr/bin/c++  -I/Users/tejjchid/mem-alloc/src -I/Users/tejjchid/mem-alloc/include -std=gnu++20 -O2 -Wall -Wextra -o CMakeFiles/memalloc.dir/src/slab.cpp.o -c /Users/tejjchid/mem-alloc/src/slab.cpp",
+  "command": "/usr/bin/c++ -DMA_ENABLE_STATS=0 -I/Users/tejjchid/mem-alloc/src -I/Users/tejjchid/mem-alloc/include -std=gnu++20 -O2 -Wall -Wextra -o CMakeFiles/memalloc.dir/src/slab.cpp.o -c /Users/tejjchid/mem-alloc/src/slab.cpp",
   "file": "/Users/tejjchid/mem-alloc/src/slab.cpp",
   "output": "CMakeFiles/memalloc.dir/src/slab.cpp.o"
 },
 {
   "directory": "/Users/tejjchid/mem-alloc/build",
-  "command": "/usr/bin/c++  -I/Users/tejjchid/mem-alloc/src -I/Users/tejjchid/mem-alloc/include -std=gnu++20 -O2 -Wall -Wextra -o CMakeFiles/memalloc.dir/src/tls_cache.cpp.o -c /Users/tejjchid/mem-alloc/src/tls_cache.cpp",
+  "command": "/usr/bin/c++ -DMA_ENABLE_STATS=0 -I/Users/tejjchid/mem-alloc/src -I/Users/tejjchid/mem-alloc/include -std=gnu++20 -O2 -Wall -Wextra -o CMakeFiles/memalloc.dir/src/tls_cache.cpp.o -c /Users/tejjchid/mem-alloc/src/tls_cache.cpp",
   "file": "/Users/tejjchid/mem-alloc/src/tls_cache.cpp",
   "output": "CMakeFiles/memalloc.dir/src/tls_cache.cpp.o"
 },
 {
   "directory": "/Users/tejjchid/mem-alloc/build",
-  "command": "/usr/bin/c++  -I/Users/tejjchid/mem-alloc/src -I/Users/tejjchid/mem-alloc/include -std=gnu++20 -O2 -Wall -Wextra -o CMakeFiles/memalloc.dir/src/stats.cpp.o -c /Users/tejjchid/mem-alloc/src/stats.cpp",
+  "command": "/usr/bin/c++ -DMA_ENABLE_STATS=0 -I/Users/tejjchid/mem-alloc/src -I/Users/tejjchid/mem-alloc/include -std=gnu++20 -O2 -Wall -Wextra -o CMakeFiles/memalloc.dir/src/stats.cpp.o -c /Users/tejjchid/mem-alloc/src/stats.cpp",
   "file": "/Users/tejjchid/mem-alloc/src/stats.cpp",
   "output": "CMakeFiles/memalloc.dir/src/stats.cpp.o"
 },
 {
   "directory": "/Users/tejjchid/mem-alloc/build",
-  "command": "/usr/bin/c++  -I/Users/tejjchid/mem-alloc/src -I/Users/tejjchid/mem-alloc/include -std=gnu++20 -O2 -Wall -Wextra -o CMakeFiles/memalloc.dir/src/api.cpp.o -c /Users/tejjchid/mem-alloc/src/api.cpp",
+  "command": "/usr/bin/c++ -DMA_ENABLE_STATS=0 -I/Users/tejjchid/mem-alloc/src -I/Users/tejjchid/mem-alloc/include -std=gnu++20 -O2 -Wall -Wextra -o CMakeFiles/memalloc.dir/src/api.cpp.o -c /Users/tejjchid/mem-alloc/src/api.cpp",
   "file": "/Users/tejjchid/mem-alloc/src/api.cpp",
   "output": "CMakeFiles/memalloc.dir/src/api.cpp.o"
 },
 {
   "directory": "/Users/tejjchid/mem-alloc/build",
-  "command": "/usr/bin/c++  -I/Users/tejjchid/mem-alloc/include -std=gnu++20 -O2 -Wall -Wextra -o CMakeFiles/test_memalloc.dir/tests/test_basic.cpp.o -c /Users/tejjchid/mem-alloc/tests/test_basic.cpp",
+  "command": "/usr/bin/c++ -DMA_ENABLE_STATS=0 -I/Users/tejjchid/mem-alloc/include -std=gnu++20 -O2 -Wall -Wextra -o CMakeFiles/test_memalloc.dir/tests/test_basic.cpp.o -c /Users/tejjchid/mem-alloc/tests/test_basic.cpp",
   "file": "/Users/tejjchid/mem-alloc/tests/test_basic.cpp",
   "output": "CMakeFiles/test_memalloc.dir/tests/test_basic.cpp.o"
 },
 {
   "directory": "/Users/tejjchid/mem-alloc/build",
-  "command": "/usr/bin/c++  -I/Users/tejjchid/mem-alloc/include -std=gnu++20 -O2 -Wall -Wextra -o CMakeFiles/test_memalloc.dir/tests/test_coalesce.cpp.o -c /Users/tejjchid/mem-alloc/tests/test_coalesce.cpp",
+  "command": "/usr/bin/c++ -DMA_ENABLE_STATS=0 -I/Users/tejjchid/mem-alloc/include -std=gnu++20 -O2 -Wall -Wextra -o CMakeFiles/test_memalloc.dir/tests/test_coalesce.cpp.o -c /Users/tejjchid/mem-alloc/tests/test_coalesce.cpp",
   "file": "/Users/tejjchid/mem-alloc/tests/test_coalesce.cpp",
   "output": "CMakeFiles/test_memalloc.dir/tests/test_coalesce.cpp.o"
 },
 {
   "directory": "/Users/tejjchid/mem-alloc/build",
-  "command": "/usr/bin/c++  -I/Users/tejjchid/mem-alloc/include -std=gnu++20 -O2 -Wall -Wextra -o CMakeFiles/test_memalloc.dir/tests/test_threaded.cpp.o -c /Users/tejjchid/mem-alloc/tests/test_threaded.cpp",
+  "command": "/usr/bin/c++ -DMA_ENABLE_STATS=0 -I/Users/tejjchid/mem-alloc/include -std=gnu++20 -O2 -Wall -Wextra -o CMakeFiles/test_memalloc.dir/tests/test_threaded.cpp.o -c /Users/tejjchid/mem-alloc/tests/test_threaded.cpp",
   "file": "/Users/tejjchid/mem-alloc/tests/test_threaded.cpp",
   "output": "CMakeFiles/test_memalloc.dir/tests/test_threaded.cpp.o"
 },
 {
   "directory": "/Users/tejjchid/mem-alloc/build",
-  "command": "/usr/bin/c++ -DBENCHMARK_STATIC_DEFINE -I/Users/tejjchid/mem-alloc/include -std=gnu++20 -O2 -Wall -Wextra -o CMakeFiles/bench_memalloc.dir/bench/bench_main.cpp.o -c /Users/tejjchid/mem-alloc/bench/bench_main.cpp",
+  "command": "/usr/bin/c++ -DBENCHMARK_STATIC_DEFINE -DMA_ENABLE_STATS=0 -I/Users/tejjchid/mem-alloc/include -std=gnu++20 -O2 -Wall -Wextra -o CMakeFiles/bench_memalloc.dir/bench/bench_main.cpp.o -c /Users/tejjchid/mem-alloc/bench/bench_main.cpp",
   "file": "/Users/tejjchid/mem-alloc/bench/bench_main.cpp",
   "output": "CMakeFiles/bench_memalloc.dir/bench/bench_main.cpp.o"
 }
