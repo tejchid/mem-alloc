@@ -1,0 +1,6 @@
+/Users/tejjchid/mem-alloc/build/CMakeFiles/memalloc.dir
+/Users/tejjchid/mem-alloc/build/CMakeFiles/test_memalloc.dir
+/Users/tejjchid/mem-alloc/build/CMakeFiles/bench_memalloc.dir
+/Users/tejjchid/mem-alloc/build/CMakeFiles/test.dir
+/Users/tejjchid/mem-alloc/build/CMakeFiles/edit_cache.dir
+/Users/tejjchid/mem-alloc/build/CMakeFiles/rebuild_cache.dir
