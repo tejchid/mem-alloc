@@ -1,1 +1,0 @@
-/usr/bin/c++ -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/test_memalloc.dir/tests/test_basic.cpp.o CMakeFiles/test_memalloc.dir/tests/test_coalesce.cpp.o CMakeFiles/test_memalloc.dir/tests/test_threaded.cpp.o -o test_memalloc  libmemalloc.a /usr/local/lib/libgtest.a /usr/local/lib/libgtest_main.a /usr/local/lib/libgtest.a

@@ -1,1 +1,0 @@
-/usr/bin/c++ -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/bench_memalloc.dir/bench/bench_main.cpp.o -o bench_memalloc  libmemalloc.a /usr/local/lib/libbenchmark.a

@@ -1,2 +1,0 @@
-/usr/bin/ar qc libmemalloc.a CMakeFiles/memalloc.dir/src/vm_region.cpp.o CMakeFiles/memalloc.dir/src/arena.cpp.o CMakeFiles/memalloc.dir/src/slab.cpp.o CMakeFiles/memalloc.dir/src/tls_cache.cpp.o CMakeFiles/memalloc.dir/src/stats.cpp.o CMakeFiles/memalloc.dir/src/api.cpp.o
-/usr/bin/ranlib libmemalloc.a
