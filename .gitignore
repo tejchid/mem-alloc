@@ -1,0 +1,11 @@
+# build output
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+# macOS
+.DS_Store
