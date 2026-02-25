@@ -1,0 +1,20 @@
+---------------------------------------------------------------------------------
+Benchmark                       Time             CPU   Iterations UserCounters...
+---------------------------------------------------------------------------------
+BM_MA_Small/threads:1         103 ns          102 ns      6604833 items_per_second=9.75863M/s
+BM_MA_Small/threads:4         131 ns          126 ns      5487828 items_per_second=31.8504M/s
+BM_MA_Small/threads:8         193 ns          182 ns      3921624 items_per_second=44.0461M/s
+BM_SYS_Small/threads:1       66.7 ns         66.4 ns     10685065 items_per_second=15.0499M/s
+BM_SYS_Small/threads:4       70.0 ns         68.0 ns     10416436 items_per_second=58.8351M/s
+BM_SYS_Small/threads:8       97.3 ns         96.6 ns      7726272 items_per_second=82.8015M/s
+BM_MA_Large/threads:1         156 ns          155 ns      4529073 items_per_second=6.45718M/s
+BM_MA_Large/threads:4        1860 ns         1568 ns       449560 items_per_second=2.55073M/s
+BM_SYS_Large/threads:1       92.4 ns         91.5 ns      7743020 items_per_second=10.9337M/s
+BM_SYS_Large/threads:4       93.4 ns         92.6 ns      7522192 items_per_second=43.1796M/s
+BM_MA_Churn/threads:1       36439 ns        36232 ns        19266 items_per_second=7.06564M/s
+BM_MA_Churn/threads:4       81054 ns        49388 ns        15380 items_per_second=20.7339M/s
+BM_MA_Churn/threads:8      301284 ns        62504 ns        10616 items_per_second=32.7659M/s
+BM_SYS_Churn/threads:1      22960 ns        22887 ns        30431 items_per_second=11.1856M/s
+BM_SYS_Churn/threads:4      35328 ns        35087 ns        19680 items_per_second=29.1849M/s
+BM_SYS_Churn/threads:8      49955 ns        49650 ns        14168 items_per_second=41.2483M/s
+BM_MA_CrossThreadFree       51522 ns        35946 ns        20035 items_per_second=1.78044M/s

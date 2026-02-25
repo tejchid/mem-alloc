@@ -23,8 +23,7 @@ SlabRun* slab_run_init(void* mem, uint32_t class_id) {
     run->capacity    = static_cast<uint32_t>(usable / run->block_size);
     run->in_use      = 0;
 
-    // build intrusive free list through all blocks
-    // each free block stores a next pointer in its first bytes
+    // build intrusive free list
     for (uint32_t i = 0; i < run->capacity; i++) {
         void* block = base + i * run->block_size;
         void* next  = (i + 1 < run->capacity)
@@ -32,9 +31,10 @@ SlabRun* slab_run_init(void* mem, uint32_t class_id) {
                       : nullptr;
         memcpy(block, &next, sizeof(void*));
     }
-    run->local_free = base; // head of free list
 
-    g_stats.slab_capacity.fetch_add(run->capacity);
+    run->local_free = base;
+
+    stats_slab_capacity_add(run->capacity);
     return run;
 }
 
@@ -44,22 +44,24 @@ void* slab_run_alloc(SlabRun* run) {
     void* block = run->local_free;
     void* next;
     memcpy(&next, block, sizeof(void*));
+
     run->local_free = next;
     run->in_use++;
-    g_stats.slab_in_use.fetch_add(1);
+
+    stats_slab_inuse_inc();
     return block;
 }
 
 void slab_run_free(SlabRun* run, void* ptr) {
     if (platform::thread_id() == run->owner_tid) {
-        // owner thread — push to local free list directly
+        // owner thread
         memcpy(ptr, &run->local_free, sizeof(void*));
         run->local_free = ptr;
         run->in_use--;
-        g_stats.slab_in_use.fetch_sub(1);
+
+        stats_slab_inuse_dec();
     } else {
-        // remote thread — atomic push onto remote_free Treiber stack
-        // acquire-release so the block contents are visible to owner
+        // remote thread — Treiber stack
         void* old_head = run->remote_free.load(std::memory_order_relaxed);
         do {
             memcpy(ptr, &old_head, sizeof(void*));
@@ -67,20 +69,23 @@ void slab_run_free(SlabRun* run, void* ptr) {
             old_head, ptr,
             std::memory_order_release,
             std::memory_order_relaxed));
-        // in_use decremented by owner when it drains
+        // owner decrements in_use when draining
     }
 }
 
 void slab_run_drain_remote(SlabRun* run) {
-    // owner thread calls this to absorb remotely freed blocks
     void* head = run->remote_free.exchange(nullptr, std::memory_order_acquire);
+
     while (head) {
         void* next;
         memcpy(&next, head, sizeof(void*));
+
         memcpy(head, &run->local_free, sizeof(void*));
         run->local_free = head;
+
         run->in_use--;
-        g_stats.slab_in_use.fetch_sub(1);
+        stats_slab_inuse_dec();
+
         head = next;
     }
 }
@@ -90,7 +95,6 @@ bool slab_run_empty(SlabRun* run) {
 }
 
 SlabRun* slab_run_of(void* ptr) {
-    // runs are RUN_SIZE-aligned so masking gives the run base
     uintptr_t base = reinterpret_cast<uintptr_t>(ptr) & ~(RUN_SIZE - 1);
     return reinterpret_cast<SlabRun*>(base);
 }
